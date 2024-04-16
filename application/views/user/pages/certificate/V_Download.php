@@ -22,6 +22,12 @@
     <h1 style="text-align: center;"><?= $certificate->participant_name ?></h1>
     <p style="text-align: center;"><?= $certificate->certificate_text ?></p>
     <h2 style="text-align: center;"><?= $event->location ?></h2>
-    <p style="text-align: center;">Pada tanggal: <?= $event->event_date ?></p>
+    <p style="text-align: center;">Pada tanggal : <?= $event->event_date ?></p>
+    <center><p>Kepala SMK YAJ</p></center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p style="text-align: center;">Idham Kholid, S.Ag., S.E.</p>
 
 </body></html>

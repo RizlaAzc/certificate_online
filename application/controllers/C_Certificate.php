@@ -31,14 +31,10 @@ class C_Certificate extends CI_Controller {
 		$a = $user_id['user_id'];
 
 		$generate = $this->db->query("SELECT * FROM certificate_assignments WHERE user_id=$a")->result();
-		$certificate = $this->M_Certificate->getDataCertificate();
-		$event = $this->M_Event->getDataEvent();
-		$users = $this->db->query("SELECT * FROM users WHERE level='user'")->result();
+		$certificate = $this->db->query("SELECT * FROM certificates WHERE certificate_id=$a")->result();
 
 		$data['generate'] = $generate;
 		$data['certificate'] = $certificate;
-		$data['event'] = $event;
-		$data['users'] = $users;
 
 		$this->load->view('user/_partials/_head', $title);
 		$this->load->view('user/_partials/_navbar', $profil);
