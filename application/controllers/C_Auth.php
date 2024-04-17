@@ -5,9 +5,9 @@ class C_Auth extends CI_Controller {
 
 	public function index()
 	{
-		if ($this->session->userdata('username')) {
+		if ($this->session->userdata('email')) {
 			$this->session->set_flashdata('a', '<div class="alert alert-danger" role="alert">Logout First!</div>');
-			redirect('dashboard');
+			redirect('download_certificate');
 		}
 
 		$title['title'] = 'Certificate Online';
@@ -33,7 +33,8 @@ class C_Auth extends CI_Controller {
 				if (password_verify($password, $hasil->password)) {
 
 					$this->session->set_userdata('id', $hasil->id);
-					$this->session->set_userdata('email', TRUE);
+					$this->session->set_userdata('full_name', TRUE);
+					$this->session->set_userdata('email', $hasil->email);
 					$this->session->set_userdata('username', $hasil->username);
 					$this->session->set_userdata('user_id', $hasil->user_id);
 					redirect('download_certificate');
@@ -85,6 +86,7 @@ class C_Auth extends CI_Controller {
 				'username' => htmlspecialchars($this->input->post('username', true)),
 				'full_name' => htmlspecialchars($this->input->post('full_name', true)),
 				'email' => htmlspecialchars($this->input->post('email', true)),
+				'photo' => 'profile.png',
 				'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
 				'level' => 'user',
 				// 'created_at' => date('Y-m-d H:i:s')

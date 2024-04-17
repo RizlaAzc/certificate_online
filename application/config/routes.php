@@ -77,6 +77,8 @@ $route['login'] = 'C_Auth/login';
 $route['logout'] = 'C_Auth/logout';
 $route['register'] = 'C_Auth/register';
 
+$route['profile'] = 'C_Profile';
+
 $route['dashboard'] = 'C_Dashboard';
 
 $route['download_certificate'] = 'C_Certificate';

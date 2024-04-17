@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Mar 2024 pada 22.55
--- Versi server: 10.4.11-MariaDB
--- Versi PHP: 7.3.14
+-- Waktu pembuatan: 17 Apr 2024 pada 20.31
+-- Versi server: 10.4.24-MariaDB
+-- Versi PHP: 7.4.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -78,6 +77,7 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `full_name` varchar(100) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `photo` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `level` enum('admin','user') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -86,8 +86,8 @@ CREATE TABLE `users` (
 -- Dumping data untuk tabel `users`
 --
 
-INSERT INTO `users` (`user_id`, `username`, `password`, `full_name`, `email`, `created_at`, `level`) VALUES
-(0, 'admin', '$2y$10$NacgI41gJwVjMxd9hB.5quMm.28aVc57SOwXwim4B7de1kbnPJo/W', 'admin', 'admin@gmail.com', '2024-02-28 02:06:27', 'admin');
+INSERT INTO `users` (`user_id`, `username`, `password`, `full_name`, `email`, `photo`, `created_at`, `level`) VALUES
+(0, 'admin', '$2y$10$NacgI41gJwVjMxd9hB.5quMm.28aVc57SOwXwim4B7de1kbnPJo/W', 'admin', 'admin@gmail.com', 'profile.png', '2024-02-28 02:06:27', 'admin');
 
 --
 -- Indexes for dumped tables

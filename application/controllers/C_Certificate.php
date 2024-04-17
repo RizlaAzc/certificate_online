@@ -11,7 +11,7 @@ class C_Certificate extends CI_Controller {
 		$this->load->model('M_Certificate');
 		$this->load->model('M_Event');
 
-		if (!$this->session->userdata('username')) {
+		if (!$this->session->userdata('email')) {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Login First!</div>');
             redirect('');
         }
@@ -20,13 +20,13 @@ class C_Certificate extends CI_Controller {
 
 	public function index()
 	{
-		$profil['profil'] = $this->db->get_where('users', ['username' => $this->session->userdata('username')])->row_array();
+		$profil['profil'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
 
 		$title['title'] = 'Generate Certificates - Certificate Online';
 
 		$year['year'] = date('Y');
 
-		$user_id = $this->db->get_where('users', ['username' => $this->session->userdata('username')])->row_array();
+		$user_id = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
 
 		$a = $user_id['user_id'];
 

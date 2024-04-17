@@ -7,7 +7,7 @@
           </button>
         </div>
         <div>
-          <a class="navbar-brand brand-logo" href="<?= base_url('dashboard') ?>">
+          <a class="navbar-brand brand-logo" href="<?= base_url('download_certificate') ?>">
             <img src="<?= base_url('assets/images/navbar.png') ?>" style="width: 100%; height: auto;" alt="logo" />
           </a>
         </div>
@@ -29,8 +29,9 @@
           </li>
           <li class="nav-item dropdown d-none d-lg-block user-dropdown">
             <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="img-xs rounded-circle" src="<?= base_url('assets/images/profil.png') ?>" alt="Profile image"> </a>
+              <img class="img-xs rounded-circle" src="<?= base_url('assets/images/profile/' . $profil['photo']) ?>" alt="profile_image"> </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+              <a class="dropdown-item" href="<?= base_url('profile') ?>"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i>My Profile</a>
               <a class="dropdown-item" href="<?= base_url('logout') ?>"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
             </div>
           </li>
