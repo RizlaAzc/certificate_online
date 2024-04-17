@@ -36,7 +36,7 @@
                           <td class="text-center"><?= $generate->event_id ?></td>
                           <td class="text-center"><?= $generate->assigned_at ?></td>
                           <td class="text-center">
-                            <label class="badge badge-warning" style="margin-right: 3px;"><a class="text-warning" style="text-decoration: none;" href="<?= base_url('admin/download/' . $generate->assignment_id) ?>">Download</a></label><!-- <label class="badge badge-info" style="margin: 3px;"><a class="text-info" style="text-decoration: none;" href="<?= base_url('edit_generate/' . $generate->assignment_id) ?>">Edit</a></label> --><label class="badge badge-danger" style="margin-left: 3px;"><a class="text-danger" style="text-decoration: none;" href="<?= base_url('admin/C_Generate/fungsi_hapus/' . $generate->assignment_id) ?>">Delete</a></label></td>
+                            <label class="badge badge-warning" style="margin-right: 3px;"><a class="text-warning" style="text-decoration: none;" target="_blank" href="<?= base_url('admin/download/' . $generate->assignment_id) ?>">Download</a></label><!-- <label class="badge badge-info" style="margin: 3px;"><a class="text-info" style="text-decoration: none;" href="<?= base_url('edit_generate/' . $generate->assignment_id) ?>">Edit</a></label> --><label class="badge badge-danger" style="margin-left: 3px;"><a class="text-danger" style="text-decoration: none;" href="<?= base_url('admin/C_Generate/fungsi_hapus/' . $generate->assignment_id) ?>">Delete</a></label></td>
                         </tr>
                         <?php
                         }

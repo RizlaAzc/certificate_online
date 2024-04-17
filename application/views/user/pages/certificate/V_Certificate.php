@@ -32,7 +32,7 @@
                         ?>
                           <td class="text-center"><?= $generate->assigned_at ?></td>
                           <td class="text-center">
-                            <label class="badge badge-warning" style="margin-right: 3px;"><a class="text-warning" style="text-decoration: none;" href="<?= base_url('download/' . $generate->assignment_id) ?>">Download</a></label</td>
+                            <label class="badge badge-warning" style="margin-right: 3px;"><a class="text-warning" style="text-decoration: none;" target="_blank" href="<?= base_url('download/' . $generate->assignment_id) ?>">Download</a></label</td>
                         </tr>
                         <?php
                         }
