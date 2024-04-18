@@ -32,7 +32,7 @@
                         ?>
                         <tr>
                           <td class="text-center"><?= $no++ ?></td>
-                          <td class="text-center"><?= $certificate->participant_name ?></td>
+                          <td class="text-center"><?= $certificate->full_name ?></td>
                           <td class="text-center"><?= $certificate->event_name ?></td>
                           <td class="text-center"><?= $certificate->event_date ?></td>
                           <td class="text-center"><?= $certificate->certificate_text ?></td>
@@ -66,12 +66,12 @@
               <div class="modal-body">
                   <div class="form-group">
                       <label for="inputAddress2" class="form-label">Participant Name</label>
-                      <select class="form-control" id="cars" name="participant_name">
+                      <select class="form-control" id="cars" name="user_id">
                         <option selected="true" disabled="disabled">Choose Participant</option>
                         <?php
                           foreach($users as $users){
                         ?>
-                        <option value="<?= $users->full_name ?>"><?= $users->full_name ?></option>
+                        <option value="<?= $users->user_id ?>"><?= $users->full_name ?></option>
                         <?php
                           }
                         ?>

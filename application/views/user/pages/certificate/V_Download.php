@@ -28,7 +28,7 @@
 
     <h1 style="text-align: center;">CERTIFICATE</h1>
     <p style="text-align: center;">Diberikan kepada :</p>
-    <h1 style="text-align: center;"><?= $certificate->participant_name ?></h1>
+    <h1 style="text-align: center;"><?= $certificate->full_name ?></h1>
     <p style="text-align: center;"><?= $certificate->certificate_text ?></p>
     <h2 style="text-align: center;"><?= $event->location ?></h2>
     <p style="text-align: center;">Pada tanggal : <?= $event->event_date ?></p>

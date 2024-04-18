@@ -6,17 +6,19 @@ class M_Certificate extends CI_Model
 {
     function getDataCertificate()
     {
+        $this->db->join('users', 'users.user_id = certificates.user_id');
         $query = $this->db->get('certificates');
         return $query->result();
     }
-
+    
     function insertDataCertificate($data)
     {
         $this->db->insert('certificates', $data);
     }
-
+    
     function getDataCertificateDetail($id)
     {
+        $this->db->join('users', 'users.user_id = certificates.user_id');
         $this->db->where('certificate_id', $id);
         $query =  $this->db->get('certificates');
         return $query->row();

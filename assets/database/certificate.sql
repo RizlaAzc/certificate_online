@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Apr 2024 pada 20.31
+-- Waktu pembuatan: 18 Apr 2024 pada 05.33
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.24
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `certificates` (
   `certificate_id` int(11) NOT NULL,
-  `participant_name` varchar(255) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `event_name` varchar(255) NOT NULL,
   `event_date` date NOT NULL,
   `certificate_text` text DEFAULT NULL,

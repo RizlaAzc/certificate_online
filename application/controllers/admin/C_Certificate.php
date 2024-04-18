@@ -67,13 +67,13 @@ class C_Certificate extends CI_Controller {
     {
         $profil['profil'] = $this->db->get_where('users', ['username' => $this->session->userdata('username')])->row_array();
 
-        $participant_name = $this->input->post('participant_name');
+        $user_id = $this->input->post('user_id');
         $event_name = $this->input->post('event_name');
         $event_date = $this->input->post('event_date');
         $certificate_text = $this->input->post('certificate_text');
 
         $ArrInsert = array(
-            'participant_name' => $participant_name,
+            'user_id' => $user_id,
             'event_name' => $event_name,
             'event_date' => $event_date,
             'certificate_text' => $certificate_text
