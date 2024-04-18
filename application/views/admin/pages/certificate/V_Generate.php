@@ -92,7 +92,7 @@
                     <div class="form-group">
                       <label for="inputAddress2" class="form-label">Event ID</label>
                       <select class="form-control" id="cars" name="event_id">
-                        <option selected="true" disabled="disabled">Choose Certificate</option>
+                        <option selected="true" disabled="disabled">Choose Event</option>
                         <?php
                           foreach($event as $event){
                         ?>

@@ -17,7 +17,7 @@
                         <?php
                           foreach($users as $users){
                         ?>
-                        <option value="<?= $users->full_name ?>"><?= $users->full_name ?></option>
+                        <option value="<?= $users->user_id ?>"><?= $users->full_name ?></option>
                         <?php
                           }
                         ?>
